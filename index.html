@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>크리메디 원장님 촬영 기획안</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--ink:#191f28;--text:#4e5968;--sub:#8b95a1;--line:#e5e8eb;--soft:#f2f4f6;--acc:#3182f6;--warn:#f04452;--bg:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#f2f4f6;--text:#c9cdd2;--sub:#8b95a1;--line:#2c3035;--soft:#1e2125;--acc:#4c94ff;--warn:#ff6b75;--bg:#121417}}
+:root[data-theme="dark"]{--ink:#f2f4f6;--text:#c9cdd2;--sub:#8b95a1;--line:#2c3035;--soft:#1e2125;--acc:#4c94ff;--warn:#ff6b75;--bg:#121417}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 Pretendard,"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;word-break:keep-all}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:180px 1fr;gap:40px}
+nav{position:sticky;top:0;align-self:start;padding:48px 0;display:flex;flex-direction:column;gap:1px;max-height:100vh;overflow-y:auto}
+nav a{color:var(--sub);text-decoration:none;padding:5px 0;font-size:14px} nav a:hover{color:var(--ink)} nav .t{color:var(--ink);font-weight:700;margin-bottom:8px} nav .g{font-size:12px;color:var(--sub);margin:12px 0 2px;font-weight:600}
+main{padding:48px 0 96px;min-width:0;max-width:940px}
+.eyebrow{font-size:13px;color:var(--sub);margin:0 0 6px}
+h1{font-size:28px;line-height:1.35;color:var(--ink);margin:0 0 8px} .lead{margin:0 0 20px;font-size:16px} .lead b{color:var(--ink)}
+.pill{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;background:var(--soft);color:var(--text)}
+.pill.w{background:transparent;border:1px solid var(--warn);color:var(--warn)}
+section{border-top:1px solid var(--line);padding:36px 0 4px;margin-top:36px;scroll-margin-top:12px}
+h2{font-size:22px;color:var(--ink);margin:0 0 4px} h2 small{font-size:14px;color:var(--sub);font-weight:500;margin-left:6px}
+.sd{margin:0 0 18px;color:var(--sub);font-size:14px} .sd b{color:var(--ink)}
+h3{font-size:14px;color:var(--sub);font-weight:600;margin:26px 0 4px;letter-spacing:.02em}
+/* 왜 크리메디 */
+.logic{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.logic>div{padding:14px 14px 16px;border-left:1px solid var(--line)} .logic>div:first-child{border-left:0;padding-left:0}
+.logic .k{font-size:12px;color:var(--sub)} .logic .v{font-size:17px;font-weight:800;color:var(--ink);line-height:1.35;margin:2px 0 6px} .logic .c{font-size:13px}
+/* 숫자 */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.num{border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.num .v{font-size:26px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.2}
+.num .d{font-size:14px;color:var(--text);margin-top:4px} .num .s{font-size:12px;color:var(--sub);margin-top:6px}
+/* 레퍼런스 */
+.refs{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:14px}
+.refs a{text-decoration:none;color:inherit;display:block;min-width:0}
+.refs .th{aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:#000;position:relative;border:1px solid var(--line)}
+.refs img{width:100%;height:100%;object-fit:cover;display:block}
+.refs .th::after{content:"▶";position:absolute;right:8px;bottom:6px;color:#fff;font-size:12px;text-shadow:0 0 4px #000}
+.refs .tt{font-size:12.5px;line-height:1.4;margin-top:6px;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.refs .use{font-size:11.5px;color:var(--acc);margin-top:3px}
+/* 기획안 */
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.story{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:18px}
+.story div{padding:12px 14px;border-left:1px solid var(--line);font-size:13.5px} .story div:first-child{border-left:0}
+.story b{display:block;color:var(--ink);font-size:12px;margin-bottom:2px}
+.sbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:10px;margin:0 0 6px}
+.sb{aspect-ratio:9/16;border-radius:8px;position:relative;overflow:hidden;color:#fff;padding:10px;display:flex;flex-direction:column;justify-content:space-between;container-type:inline-size}
+.sb .sc{font-size:max(10px,7.5cqw);line-height:1.4;opacity:.78}
+.sb .sc b{display:block;font-size:max(10px,7cqw);opacity:.9;margin-bottom:2px;letter-spacing:.04em}
+.sb .st{align-self:center;text-align:center;font-weight:800;font-size:max(11px,10cqw);line-height:1.3;background:rgba(0,0,0,.55);padding:4px 7px;border-radius:4px;margin-bottom:14%}
+.sb .st em{font-style:normal;color:#ffd84d}
+.g1{background:linear-gradient(170deg,#2b2f36,#121417)} .g2{background:linear-gradient(170deg,#3b2a1a,#16110c)} .g3{background:linear-gradient(170deg,#1d2b45,#0d1320)} .g4{background:linear-gradient(170deg,#3a1418,#140708)} .g5{background:linear-gradient(170deg,#1f3a33,#0b1613)} .g6{background:linear-gradient(170deg,#38304a,#120f19)}
+.sbn{font-size:12px;color:var(--sub);margin-bottom:16px}
+.cut{display:grid;grid-template-columns:30px 1fr;gap:2px 12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.cut .n{grid-row:span 3;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.cut .h{color:var(--ink);font-weight:700;font-size:15px}
+.cut .how{font-size:13.5px}
+.line{margin-top:6px;padding:8px 12px;border-left:3px solid var(--acc);background:var(--soft);border-radius:0 8px 8px 0;font-size:14.5px;color:var(--ink)}
+.line small{display:inline-block;color:var(--sub);font-size:11.5px;margin-right:6px;font-weight:600}
+.line.vo{border-left-color:#a06bff}
+.cap{font-size:12.5px;color:var(--sub);margin-top:5px} .cap b{color:var(--warn);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{text-align:left;font-size:12px;color:var(--sub);font-weight:600;border-bottom:1px solid var(--ink);padding:8px 8px 8px 0}
+td{border-bottom:1px solid var(--line);padding:9px 8px 9px 0;vertical-align:top} td:first-child{color:var(--ink);font-weight:600}
+ul{margin:0;padding-left:18px} li{margin:4px 0} li b{color:var(--ink)}
+.foot{margin-top:48px;font-size:12.5px;color:var(--sub)}
+a{color:var(--acc)}
+@media (max-width:860px){.wrap{grid-template-columns:1fr;gap:0} nav{display:none} main{padding-top:32px} .logic{grid-template-columns:1fr 1fr} .logic>div:nth-child(3){border-left:0;padding-left:0} .nums{grid-template-columns:1fr 1fr} .story{grid-template-columns:1fr} .story div{border-left:0;border-top:1px solid var(--line)} .story div:first-child{border-top:0}}
+@media (max-width:480px){.nums{grid-template-columns:1fr}}
+
+.howto{margin:0 0 16px;font-size:14px;padding:12px 14px;border-radius:8px;background:var(--soft)} .howto b{color:var(--ink)}
+.rows{border-top:1px solid var(--ink);margin-top:6px}
+.rh,.row{display:grid;grid-template-columns:28px 1fr 1.35fr .95fr;gap:14px;border-bottom:1px solid var(--line)}
+.rh{font-size:12px;color:var(--sub);font-weight:600;padding:8px 0}
+.row{padding:13px 0}
+.lab{display:none}
+.rn{width:24px;height:24px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.rv{font-size:13.5px}
+.say{font-size:14.5px;color:var(--ink);line-height:1.55} .say+.say{margin-top:10px}
+.who,.who-in{display:block;width:max-content;font-size:11px;font-weight:700;padding:1px 7px;border-radius:4px;margin-bottom:3px;line-height:1.6}
+.who-in{display:inline-block;margin:0 6px 0 0}
+.t-dr .who,.who-in.t-dr{background:#3182f6;color:#fff}
+.t-self .who,.who-in.t-self{background:#0ea5e9;color:#fff}
+.t-ans .who,.who-in.t-ans{background:#0d9488;color:#fff}
+.t-vo .who,.who-in.t-vo{background:#8b5cf6;color:#fff}
+.t-pd .who,.who-in.t-pd{background:#6b7684;color:#fff}
+.t-pt .who,.who-in.t-pt{background:#16a34a;color:#fff}
+.t-mu .who,.who-in.t-mu{background:transparent;border:1px solid var(--sub);color:var(--sub)}
+.t-mu{color:var(--sub);font-size:13.5px}
+.trans{display:block;font-size:12.5px;color:var(--sub);margin-top:2px}
+.sub{display:inline-block;background:#111;color:#fff;font-weight:700;font-size:13px;padding:3px 8px;border-radius:4px;line-height:1.45;margin:0 0 4px}
+.sub.gr{background:#ffd84d;color:#111}
+.rs .sub{display:table}
+.nosub{font-size:12.5px;color:var(--sub)}
+.leg{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;font-size:13.5px}
+.leg>div{padding:6px 0;border-bottom:1px solid var(--line)}
+@media (max-width:860px){.rh{display:none} .row{grid-template-columns:24px 1fr;gap:6px 10px} .rv,.ra,.rs{grid-column:2} .lab{display:block;font-size:11px;color:var(--sub);font-weight:600;margin:4px 0 2px} .leg{grid-template-columns:1fr}}
+
+.t-dvo .who,.who-in.t-dvo{background:#8b5cf6;color:#fff}
+.t-hi .who,.who-in.t-hi{background:transparent;border:1px solid #3182f6;color:#3182f6}
+.t-vo .who,.who-in.t-vo{background:#ea7b16;color:#fff}
+.askbox{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-bottom:6px}
+.askbox>div{padding:14px 14px 16px;border-left:1px solid var(--line)} .askbox>div:first-child{border-left:0;padding-left:0}
+.askbox .k{font-size:12px;color:var(--sub)} .askbox .v{font-size:19px;font-weight:800;color:var(--ink)} .askbox .c{font-size:13px}
+@media (max-width:560px){.askbox{grid-template-columns:1fr}.askbox>div{border-left:0;padding-left:0;border-top:1px solid var(--line)}}
+
+.strength{margin:0 0 10px;font-size:14px;color:var(--ink)} .strength b{display:inline-block;font-size:11px;font-weight:700;background:var(--ink);color:var(--bg);padding:1px 7px;border-radius:4px;margin-right:8px;vertical-align:1px}
+.groupintro{border-top:2px solid var(--ink)}
+.reflab{font-size:12px;color:var(--sub);font-weight:600;margin:0 0 6px}
+.refs3{grid-template-columns:repeat(3,minmax(0,140px));margin-bottom:16px}
+.sublink{margin:0 0 8px;font-size:14px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.sublink a{display:inline-block;padding:8px 14px;border-radius:8px;background:var(--soft);color:var(--ink);font-weight:700;text-decoration:none}
+.sublink a:hover{background:var(--acc);color:#fff}
+.sublink span{color:var(--sub);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <span class="t">원장님 촬영</span>
+  <a href="#ask">원장님께 부탁할 것</a>
+  <a href="#legend">표기 읽는 법</a>
+  <a href="#why">후킹 포인트</a>
+  <a href="#nums">자막용 숫자</a>
+  <span class="g">개원 이야기</span>
+  <a href="#p1">1. 개원만 하면</a>
+  <a href="#p2">2. 외국인 환자 201만 명</a>
+  <a href="#p3">3. D-180 → 개원 첫 달</a>
+  <a href="#p4">4. 같은 날 개원한 두 병원</a>
+  <a href="#p5">5. 상하이에서 온 예약</a>
+  <a href="#p6">6. 한 달에 하루</a>
+  <span class="g">크리메디 강점</span>
+  <a href="#p7">7. 숫자로 보는 크리메디</a>
+  <a href="#p8">8. 원장님은 진료만 하세요</a>
+  <a href="#p9">9. 이런 원장님도 환영합니다</a>
+  <a href="#p10">10. 영상 1편, 5개 나라</a>
+  <span class="g">공통</span>
+  <a href="#prep">촬영 전 확인</a>
+  <a href="#rule">촬영 주의</a>
+  <span class="g">서브 페이지</span>
+  <a href="ads-261113/index.html" style="color:var(--acc);font-weight:700">광고 기획 실행안 →</a>
+</nav>
+<main>
+  <p class="eyebrow">크리메디 · 원장님 대상 광고 · 레퍼런스 원장님 출연(동의 전제)</p>
+  <h1>원장님 모델 촬영 기획안</h1>
+  <p class="lead">광고를 보는 원장님이 <b>"왜 크리메디를 해야 하는지"</b> 느끼게 만드는 촬영안 10개입니다(1~6 개원 이야기 · 7~10 크리메디 강점). 원장님 부담은 <b>짧은 한마디와 평소 모습 촬영</b>으로 최소화했습니다. 장면마다 <b>이미지 콘티 · 화면 · 소리 · 자막</b>을 붙였습니다. 찍어 보고 반응이 좋은 쪽으로 계속 바꿔 가면 됩니다.</p>
+  <p class="sublink"><a href="ads-261113/index.html">광고 기획 실행안 보기 →</a><span>매체·타깃, 소재 8안, 랜딩, 테스트 운영</span></p>
+
+
+  <section id="ask" style="margin-top:8px">
+    <h2>원장님께 부탁할 것</h2>
+    <p class="sd">원장님 본인 병원 광고가 아니라 크리메디 광고에 <b>도움을 주시는 것</b>이라, 원장님 부담은 최소로 잡았습니다. <b>긴 설명이나 외울 대사는 없습니다.</b> 이야기는 성우 내레이션, 자막, 다른 출연자 장면이 끌고 갑니다.</p>
+    <div class="askbox">
+      <div><div class="k">시간</div><div class="v">1시간 이내</div><div class="c">진료 사이 틈틈이</div></div>
+      <div><div class="k">하실 일 ①</div><div class="v">짧은 한마디</div><div class="c">한 문장씩, 카메라 보고 2~3번</div></div>
+      <div><div class="k">하실 일 ②</div><div class="v">평소 모습 촬영</div><div class="c">진료·상담·촬영 날을 그대로 따라 찍음</div></div>
+    </div>
+    <h3>원장님 한마디 전체 목록 (스케치북 · 프롬프터로 띄워 드림)</h3>
+    <table><tr><th>기획안</th><th><span class="who-in t-dr">원장님 한마디</span></th></tr>
+<tr><td>1 · 개원만 하면</td><td>"저는 개원 전부터 채널을 키웠어요."<br>"채널은 개원 전에 시작하세요."</td></tr>
+<tr><td>2 · 외국인 환자 201만 명 시대</td><td>"가격 말고, 원장님으로 승부하세요."</td></tr>
+<tr><td>3 · D-180 → 개원 첫 달</td><td>"개원 전에 시작한 게 전부였어요."</td></tr>
+<tr><td>4 · 같은 날 개원한 두 병원</td><td>선택: "차이는 개원 전에 뭘 했느냐예요."</td></tr>
+<tr><td>5 · 상하이에서 온 예약</td><td>환자 맞이(평소처럼 인사) · 선택: "환자분들이 저를 알고 오세요."</td></tr>
+<tr><td>6 · 한 달에 하루면 됩니다</td><td>"두 시간이면 한 달 치예요."</td></tr>
+<tr><td>7 · 숫자로 보는 크리메디</td><td>없음</td></tr>
+<tr><td>8 · 원장님은 진료만 하세요</td><td>선택: "저는 진료만 해요."</td></tr>
+<tr><td>9 · 이런 원장님도 환영합니다</td><td>없음</td></tr>
+<tr><td>10 · 영상 1편, 5개 나라</td><td>없음(기존 영상 사용)</td></tr></table>
+  </section>
+
+  <section id="legend">
+    <h2>표기 읽는 법</h2>
+    <p class="sd">컷마다 <b>화면 · 소리 · 자막</b> 세 칸입니다. 소리 칸의 색 표시가 <b>누가, 어떻게 말하는지</b>입니다. 대사와 자막은 모두 예시입니다.</p>
+    <div class="leg">
+      <div><span class="who-in t-dr">원장님 한마디 · 카메라 보고</span>원장님이 렌즈를 보고 짧은 한 문장</div>
+      <div><span class="who-in t-hi">원장님 · 평소처럼 인사</span>정해진 대사 없이 평소처럼</div>
+      <div><span class="who-in t-vo">성우 내레이션</span>크리메디 쪽 성우 또는 AI 보이스. 원장님 아님</div>
+      <div><span class="who-in t-pt">출연자 대사</span>환자 역 출연자(외국어는 뜻을 함께 적음)</div>
+      <div><span class="who-in t-mu">말 없음 · 음악만</span>대사 없이 화면과 음악만</div>
+      <div><span class="sub">자막</span> 화면에 들어가는 글자 &nbsp;<span class="sub gr">그래픽</span> 숫자를 크게 띄우는 그래픽</div>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>후킹 포인트</h2>
+    <p class="sd">원장님이 반응할 만한 지점 네 가지입니다. 한 편에 하나만 세게 써도 되고, 몇 개를 엮어도 됩니다. 정답은 없으니 테스트하며 고르면 됩니다.</p>
+    <div class="logic">
+      <div><div class="k">착각</div><div class="v">개원만 하면 환자가 올 줄 안다</div><div class="c">개원 전 원장님 대부분의 기대</div></div>
+      <div><div class="k">현실</div><div class="v">피부과는 넘쳐 나고 남은 건 가격 경쟁</div><div class="c">강남에서 '피부과' 검색하면 끝이 없음</div></div>
+      <div><div class="k">기회</div><div class="v">객단가 높은 외국인 환자는 원장을 보고 고른다</div><div class="c">가격보다 원장님 실력·철학</div></div>
+      <div><div class="k">해결</div><div class="v">개원 전부터 원장님 채널을 5개국에</div><div class="c">개원 첫 달 매출 00억</div></div>
+    </div>
+  </section>
+
+  <section id="nums">
+    <h2>자막용 숫자</h2>
+    <p class="sd"><b>"매출 00억"은 출연 원장님 실제 수치로 교체</b>합니다(노출 동의 범위 안에서).</p>
+    <div class="nums">
+      <div class="num"><div class="v">201만 명</div><div class="d">2025년 한국을 찾은 외국인 환자, 전년보다 71.9% 증가</div></div>
+      <div class="num"><div class="v">62.9%</div><div class="d">외국인 환자 10명 중 6명이 피부과 진료(131만 명)</div></div>
+      <div class="num"><div class="v">3.3조 원</div><div class="d">외국인 환자 의료 지출. 1인당 약 164만 원</div></div>
+      <div class="num"><div class="v">81%</div><div class="d">중국 30.8% · 일본 29.8% · 대만 9.2% · 미국 8.6% · 태국 2.9% — 크리메디 5개국 합</div></div>
+    </div>
+    <p class="cap">"강남 피부과" 검색 결과는 촬영 당일 네이버 지도 화면 녹화로 받습니다(끝없이 스크롤되는 화면 자체가 자막보다 강함).</p>
+  </section>
+
+  <section id="g1" class="groupintro">
+    <p class="eyebrow">기획안 1~6</p>
+    <h2 style="font-size:24px">개원 이야기</h2>
+    <p class="sd">개원을 앞둔 원장님이 <b>"내 얘기다"</b> 하고 멈추게 하는 안입니다.</p>
+  </section>
+  <section id="p1">
+    <h2>기획안 1 · 개원만 하면 바글바글할 줄 알았다 <small>25초 · 내레이션 스토리</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill w">원장님 한마디 2개</span><span class="pill">성우 내레이션 · 자막 중심</span></div>
+    <div class="story"><div><b>착각</b>개원 전날 밤, 기대</div><div><b>현실</b>텅 빈 대기실, 끝없는 피부과 검색 결과, 가격 전단</div><div><b>해결</b>개원 전부터 채널을 키운 원장님 → 북적이는 대기실</div></div>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/NX1e_2uCCbY" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/NX1e_2uCCbY/hqdefault.jpg" alt=""></div><div class="tt">개원하면 잘될까요? 의사가 말하는 현실 고충</div></a><a href="https://www.youtube.com/shorts/iMvRfw5ziFI" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/iMvRfw5ziFI/hqdefault.jpg" alt=""></div><div class="tt">병원 개원은 의사를 울린다</div></a><a href="https://www.youtube.com/shorts/y4KwB5SEF6k" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/y4KwB5SEF6k/hqdefault.jpg" alt=""></div><div class="tt">대한민국 개원의 진짜 리얼 현실</div></a></div>
+    <p class="howto">이야기는 <b>성우 내레이션과 자막</b>이 끌고 갑니다. 1~5번에는 원장님이 나오지 않습니다(빈 공간 · 소품 · 스태프 손). 원장님은 <b>6번과 10번에 짧게 한마디씩</b>만 하시면 됩니다.</p>
+    <div class="sbs"><div class="sb g2"><div class="sc"><b>#1</b>불 꺼진 대기실, 개원 현수막</div><div class="st">개원만 하면<br>환자가 올까?</div></div><div class="sb g1"><div class="sc"><b>#3</b>시계 초침, 빈 의자들</div><div class="st">현실은 <em>조용합니다</em></div></div><div class="sb g3"><div class="sc"><b>#4</b>지도 '강남 피부과' 끝없는 스크롤</div><div class="st">검색하면<br><em>끝이 없다</em></div></div><div class="sb g4"><div class="sc"><b>#5</b>할인 전단 · 가격 현수막</div><div class="st">남은 건<br>가격 경쟁</div></div><div class="sb g5"><div class="sc"><b>#9</b>외국인 환자로 찬 대기실</div><div class="st">개원 첫 달<br><em>매출 00억</em></div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>밤, 불 꺼진 대기실과 &#x27;개원&#x27; 현수막. 카메라가 천천히 다가감(사람 없음)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"개원만 하면, 환자가 알아서 올까요?"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">개원만 하면 환자가 올까?</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>아침, 유리문이 열리고 대기실 불이 켜짐(문 여는 손만, 스태프)</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>밝은 음악</div></div><div class="rs"><span class="lab">자막</span><div class="sub">개원 첫날</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>벽시계 초침 → 빈 의자들 → 울리지 않는 데스크 전화기</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"생각보다 조용합니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">현실은 조용합니다</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>폰 화면 녹화: 네이버 지도 &#x27;강남 피부과&#x27; 검색 결과를 계속 내림</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"강남에서 피부과를 검색하면, 끝이 없으니까요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">강남 피부과, 끝이 없다</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>할인 전단, &#x27;9.9만&#x27; 현수막, 이벤트 문자 화면이 빠르게 바뀜(다른 병원 이름은 블러)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"남는 건 가격 경쟁. 가격은 누구나 내릴 수 있습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">남은 건 가격 경쟁</div></div></div>
+<div class="row"><div class="rn">6</div><div class="rv"><span class="lab">화면</span>진료실, 원장님 정면</div><div class="ra"><span class="lab">소리</span><div class="say t-dr"><span class="who">원장님 한마디 · 카메라 보고</span>"저는 개원 전부터 채널을 키웠어요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">개원 6개월 전부터 시작</div></div></div>
+<div class="row"><div class="rn">7</div><div class="rv"><span class="lab">화면</span>크리메디 촬영 날 모습: 조명 켜짐, 슬레이트, 카메라 앞 원장님(평소 촬영 그대로)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"외국인 환자는 가격보다 원장을 보고 고릅니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">외국인 환자 201만 명 · 10명 중 6명은 피부과</div></div></div>
+<div class="row"><div class="rn">8</div><div class="rv"><span class="lab">화면</span>영상 1편이 중국·일본·대만·미국·태국 버전으로 바뀌는 분할 화면(편집)</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">영상 1편 → 5개 나라 채널</div></div></div>
+<div class="row"><div class="rn">9</div><div class="rv"><span class="lab">화면</span>3번과 같은 자리. 외국인 환자 역 출연자 3~4명으로 찬 대기실</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>밝은 음악</div></div><div class="rs"><span class="lab">자막</span><div class="sub">개원 첫 달, 매출 00억</div></div></div>
+<div class="row"><div class="rn">10</div><div class="rv"><span class="lab">화면</span>원장님 정면, 손가락으로 화면 아래(상담 버튼 자리)를 가리킴</div><div class="ra"><span class="lab">소리</span><div class="say t-dr"><span class="who">원장님 한마디 · 카메라 보고</span>"채널은 개원 전에 시작하세요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">개원 전 원장님 브랜딩, 크리메디</div></div></div>
+</div>
+  </section>
+  <section id="p2">
+    <h2>기획안 2 · 외국인 환자 201만 명 시대 <small>30초 · 숫자 그래픽</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill w">원장님 한마디 1개</span><span class="pill">성우 내레이션 · 그래픽 중심</span></div>
+    <div class="story"><div><b>질문</b>&quot;강남에서 피부과 검색해 보셨어요?&quot;</div><div><b>숫자</b>201만 명 · 62.9% · 3.3조 · 5개국 81%</div><div><b>결론</b>&quot;가격 말고, 원장님으로 승부하세요&quot;</div></div>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/97LP5GzdF1U" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/97LP5GzdF1U/hqdefault.jpg" alt=""></div><div class="tt">외국인 환자 첫 201만 명, 10명 중 6명은 어디로?</div></a><a href="https://www.youtube.com/shorts/4Kcx7y6iVYs" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/4Kcx7y6iVYs/hqdefault.jpg" alt=""></div><div class="tt">한국 병원을 찾은 외국인 국적 TOP5, 10명 중 6명은 피부과</div></a><a href="https://www.youtube.com/shorts/JLUe_Tdt3Cs" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/JLUe_Tdt3Cs/hqdefault.jpg" alt=""></div><div class="tt">외국인 환자 백만 명 시대, 일본인이 가장 많이 찾은 진료과</div></a></div>
+    <p class="howto"><b>숫자 그래픽과 성우 내레이션</b>이 중심입니다. 원장님은 3~4번에 평소처럼 상담하는 모습으로만 나오고(소리 없이), <b>마지막 8번에 한마디</b>만 하시면 됩니다.</p>
+    <div class="sbs"><div class="sb g3"><div class="sc"><b>#1</b>지도 '강남 피부과' 검색 화면</div><div class="st">강남 피부과<br>검색해 보셨어요?</div></div><div class="sb g1"><div class="sc"><b>#3</b>상담하는 원장님 위에 숫자 그래픽</div><div class="st">외국인 환자<br><em>201만 명</em></div></div><div class="sb g5"><div class="sc"><b>#6</b>세계지도에 5개국 불 켜짐</div><div class="st">5개국 =<br><em>81%</em></div></div><div class="sb g6"><div class="sc"><b>#7</b>샤오홍슈 원장님 이름 검색</div><div class="st">가격보다<br><em>원장</em>을 검색</div></div><div class="sb g2"><div class="sc"><b>#8</b>원장님 정면</div><div class="st">원장님으로<br>승부하세요</div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>폰 화면 녹화: 네이버 지도에서 &#x27;강남 피부과&#x27; 검색</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"강남에서 피부과, 검색해 보셨어요?"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">강남 피부과, 검색해 보셨어요?</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>검색 결과가 끝없이 내려감</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"끝이 없죠. 결국 가격으로 싸우게 됩니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">끝이 없다 → 가격 경쟁</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>원장님이 평소처럼 상담하는 모습(소리 없이). 화면 한쪽에 숫자 그래픽</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"그런데 작년 한국을 찾은 외국인 환자, 201만 명입니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">외국인 환자 201만 명</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>3번 화면 이어서</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"10명 중 6명은 피부과를 찾았습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">피부과 62.9%</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>진료실 디테일 컷(기기, 손, 조명)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"이분들이 한국 병원에 쓴 돈, 3조 원이 넘습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">외국인 환자 의료 지출 3.3조 원</div></div></div>
+<div class="row"><div class="rn">6</div><div class="rv"><span class="lab">화면</span>세계지도에 5개국이 하나씩 켜지는 그래픽(편집)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"중국, 일본, 대만, 미국, 태국. 이 다섯 나라가 80%가 넘습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">5개국 = 외국인 환자 81%</div></div></div>
+<div class="row"><div class="rn">7</div><div class="rv"><span class="lab">화면</span>폰 화면 녹화: 샤오홍슈·더우인에서 원장님 이름 검색 결과</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"이분들은 가격보다 원장을 검색하고 옵니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">가격보다 원장님을 검색합니다</div></div></div>
+<div class="row"><div class="rn">8</div><div class="rv"><span class="lab">화면</span>원장님 정면</div><div class="ra"><span class="lab">소리</span><div class="say t-dr"><span class="who">원장님 한마디 · 카메라 보고</span>"가격 말고, 원장님으로 승부하세요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">크리메디 · 5개국 원장님 채널</div></div></div>
+</div>
+  </section>
+  <section id="p3">
+    <h2>기획안 3 · D-180 → 개원 → 개원 첫 달 <small>30초 · 타임라인</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill w">원장님 한마디 1개</span><span class="pill">기존 자료 + 성우 내레이션</span></div>
+    <div class="story"><div><b>개원 전 브랜딩</b>D-180 첫 촬영 → 공사 중에도 업로드 → 해외 팔로워가 생김</div><div><b>개원</b>D-day 외국인 환자 예약이 이미 차 있음</div><div><b>개원 후</b>개원 첫 달 매출 00억</div></div>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/QeABQtwOFxw" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/QeABQtwOFxw/hqdefault.jpg" alt=""></div><div class="tt">개원 3주 전, 정신없이 준비하는 일상</div></a><a href="https://www.youtube.com/shorts/vSIuaIgZTLE" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/vSIuaIgZTLE/hqdefault.jpg" alt=""></div><div class="tt">청담동 피부과 개원 준비 인테리어 점검 브이로그</div></a><a href="https://www.youtube.com/shorts/Dmja9zT0MBM" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/Dmja9zT0MBM/hqdefault.jpg" alt=""></div><div class="tt">광고부터 시작하지 않는 이유 | 개원 첫 달 매출 2억 사례</div></a></div>
+    <p class="howto">화면 위에 D-day 숫자를 계속 띄우고 <b>성우 내레이션</b>으로 갑니다. 1~4번은 <b>크리메디가 이미 가진 자료</b>(첫 촬영 날 메이킹, 공사 현장 사진, 업로드·댓글 화면)를 씁니다. 원장님 새 촬영은 <b>6번 한마디</b>뿐입니다.</p>
+    <div class="sbs"><div class="sb g1"><div class="sc"><b>D-180</b>첫 촬영 날 메이킹 영상</div><div class="st">D-180<br>첫 촬영</div></div><div class="sb g2"><div class="sc"><b>D-60</b>공사 현장 사진</div><div class="st">D-60<br>공사 중에도 업로드</div></div><div class="sb g6"><div class="sc"><b>D-30</b>중국어·일본어 DM 화면</div><div class="st">개원 전인데<br><em>예약 문의</em></div></div><div class="sb g5"><div class="sc"><b>D-day</b>외국인 환자로 찬 대기실</div><div class="st">D-day<br>예약 <em>마감</em></div></div><div class="sb g4"><div class="sc"><b>D+30</b>원장님 정면</div><div class="st">개원 첫 달<br><em>매출 00억</em></div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>D-180 · 첫 촬영 날 메이킹 영상(기존 자료)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"개원 6개월 전, 병원도 없을 때 첫 촬영을 했습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">D-180 첫 촬영</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>D-120 · 폰 화면: 더우인 첫 업로드, 조회수 몇백</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"처음엔 조회수 몇백."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">D-120 첫 업로드</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>D-60 · 공사 현장 사진·영상(기존 자료)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"공사 중에도 영상은 계속 올라갔습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">D-60 공사 중에도 업로드</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>D-30 · 폰 화면: &quot;开业了告诉我&quot;(개원하면 알려주세요) 댓글, 예약 문의 DM(이름 가림)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"개원도 안 했는데, 예약 문의가 오기 시작했습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">D-30 개원 전 예약 문의</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>D-day · 병원 문이 열림 → 외국인 환자 역 출연자 → 예약 명단 넘기는 손</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"개원 첫날, 예약은 이미 차 있었습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">D-day 외국인 예약 O건</div></div></div>
+<div class="row"><div class="rn">6</div><div class="rv"><span class="lab">화면</span>D+30 · 원장님 정면</div><div class="ra"><span class="lab">소리</span><div class="say t-dr"><span class="who">원장님 한마디 · 카메라 보고</span>"개원 전에 시작한 게 전부였어요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">개원 첫 달, 매출 00억</div></div></div>
+<div class="row"><div class="rn">7</div><div class="rv"><span class="lab">화면</span>1번 첫 촬영 영상으로 돌아가며 마무리</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"채널은 개원 전에 시작하세요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">개원 전, 크리메디 상담</div></div></div>
+</div>
+  </section>
+  <section id="p4">
+    <h2>기획안 4 · 같은 날 개원한 두 병원 <small>25초 · 위아래 분할 화면</small></h2>
+    <div class="meta"><span class="pill">9:16 위아래 분할</span><span class="pill w">원장님 한마디 1개(선택)</span><span class="pill">자막 중심</span></div>
+    <div class="story"><div><b>같은 출발</b>같은 날, 같은 동네에서 개원</div><div><b>다른 선택</b>위: 가격 할인 / 아래: 원장님 채널</div><div><b>다른 결과</b>위: 빈 대기실 / 아래: 외국인 환자 대기</div></div>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/-tj-9KW-NAs" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/-tj-9KW-NAs/hqdefault.jpg" alt=""></div><div class="tt">병원 개원 5억 인테리어의 배신</div></a><a href="https://www.youtube.com/watch?v=xZo5c_P5VZc" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/xZo5c_P5VZc/hqdefault.jpg" alt=""></div><div class="tt">5개월 만에 개원을 후회 중인 40대 의사</div></a><a href="https://www.youtube.com/shorts/SvpVRYHO6Dc" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/SvpVRYHO6Dc/hqdefault.jpg" alt=""></div><div class="tt">강남 피부과 개원 의사의 자영업 현실은?</div></a></div>
+    <p class="howto">화면을 위아래로 나눕니다. <b>위 = 가격으로 승부한 경우</b>는 사람 얼굴 없이 손 · 소품(전단, 가격표, 빈 대기실)으로만 찍습니다. <b>아래 = 원장님 채널을 키운 경우</b>는 원장님의 평소 진료 · 촬영 날 모습을 그대로 씁니다. 말 없이 <b>자막</b>으로 가고, 원장님 한마디는 마지막에 넣어도 되고 빼도 됩니다.</p>
+    <div class="sbs"><div class="sb g1"><div class="sc"><b>#1</b>두 병원 문이 동시에 열림</div><div class="st">같은 날 개원</div></div><div class="sb g4"><div class="sc"><b>#3 위</b>할인 전단 인쇄</div><div class="st">가격을<br>내렸다</div></div><div class="sb g3"><div class="sc"><b>#3 아래</b>촬영 날 카메라 앞 원장님</div><div class="st">원장을<br>알렸다</div></div><div class="sb g5"><div class="sc"><b>#5</b>위 빈 대기실 / 아래 찬 대기실</div><div class="st">3개월 뒤</div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>위·아래 같은 구도로 두 병원 문이 동시에 열림(손만)</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">같은 날, 같은 동네에서 개원한 두 병원</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>위·아래 모두 빈 대기실</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">환자가 없다</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>위: 할인 전단이 인쇄되어 나오는 프린터 / 아래: 크리메디 촬영 날, 카메라 앞 원장님(평소 촬영 모습)</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">위) 한 곳은 가격을 내렸고</div><div class="sub">아래) 한 곳은 원장을 알렸다</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>위: 가격표 숫자를 더 낮게 고치는 손 / 아래: 폰에 쌓이는 해외 댓글</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">위) 가격은 옆 병원도 내린다</div><div class="sub">아래) 원장은 따라 할 수 없다</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>위: 빈 대기실(2번과 같은 구도) / 아래: 외국인 환자 역 출연자로 찬 대기실</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">3개월 뒤</div></div></div>
+<div class="row"><div class="rn">6</div><div class="rv"><span class="lab">화면</span>분할이 풀리고 아래 화면이 전체로. 원장님 정면</div><div class="ra"><span class="lab">소리</span><div class="say t-dr"><span class="who">원장님 한마디 · 카메라 보고</span>"차이는 개원 전에 뭘 했느냐예요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">크리메디 · 원장님 5개국 채널</div></div></div>
+</div>
+  </section>
+  <section id="p5">
+    <h2>기획안 5 · 상하이에서 온 예약 <small>30초 · 환자 시점</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill">주인공: 솔틴 인플루언서(중국어)</span><span class="pill w">원장님 인사 + 한마디 1개(선택)</span></div>
+    <div class="story"><div><b>발견</b>상하이 직장인이 샤오홍슈에서 원장님 영상을 봄</div><div><b>결정</b>저장 → 친구 공유 → DM 예약 → 한국행</div><div><b>만남</b>병원에서 원장님을 만남</div></div>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/yAlz-bkWV50" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/yAlz-bkWV50/hqdefault.jpg" alt=""></div><div class="tt">통역사와 함께 한국 초대형 피부과 가 봤습니다</div></a><a href="https://www.youtube.com/shorts/zL0zFopt0eg" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/zL0zFopt0eg/hqdefault.jpg" alt=""></div><div class="tt">일본인, 중국인, 미국인 다 몰려오는 대한민국 피부과</div></a><a href="https://www.youtube.com/shorts/dRqjq104alk" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/dRqjq104alk/hqdefault.jpg" alt=""></div><div class="tt">중국어로 상담하는 피부과 원장</div></a></div>
+    <p class="howto">외국인 환자가 원장님을 알게 되고 찾아오는 과정을 <b>환자 쪽에서</b> 보여 줍니다. 주인공은 솔틴 인플루언서이고 <b>중국어로 말하고 한국어 자막</b>을 답니다. 상하이 장면은 국내 원룸에서 찍습니다. 원장님은 <b>6번에 평소처럼 맞이</b>하시기만 하면 되고, 7번 한마디는 선택입니다.</p>
+    <div class="sbs"><div class="sb g6"><div class="sc"><b>#1</b>침대에서 샤오홍슈, 원장님 영상에서 멈춤</div><div class="st">这个医生<br>讲得好清楚</div></div><div class="sb g3"><div class="sc"><b>#3</b>DM 창에 예약 문의</div><div class="st">예약 문의<br>전송</div></div><div class="sb g1"><div class="sc"><b>#4</b>캐리어 끌고 서울 거리</div><div class="st">서울<br>도착</div></div><div class="sb g2"><div class="sc"><b>#6</b>진료실에서 원장님과 만남</div><div class="st">"영상 보고<br>왔어요!"</div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>밤. 침대에 엎드려 샤오홍슈를 넘기다 원장님 영상에서 손가락이 멈춤(폰 화면과 얼굴을 번갈아)</div><div class="ra"><span class="lab">소리</span><div class="say t-pt"><span class="who">출연자 대사</span>"这个医生讲得好清楚。"<span class="trans">뜻: 이 원장님 설명 진짜 잘한다</span></div></div><div class="rs"><span class="lab">자막</span><div class="sub">이 원장님 설명 진짜 잘한다</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>&#x27;저장&#x27; 버튼 누르는 손 클로즈업 → 위챗으로 친구에게 공유</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">가격 비교 대신, 원장님을 저장</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>DM 창에 중국어로 예약 문의를 입력 → 바로 답장이 옴</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">원장님 채널에서 바로 예약 문의</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>캐리어를 끌고 서울 거리를 걷는 뒷모습, 폰 지도를 봄</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">서울 도착</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>병원 앞. 폰 속 원장님 영상을 간판 앞에 들어 비교</div><div class="ra"><span class="lab">소리</span><div class="say t-pt"><span class="who">출연자 대사</span>"就是这里!"<span class="trans">뜻: 바로 여기다!</span></div></div><div class="rs"><span class="lab">자막</span><div class="sub">바로 여기!</div></div></div>
+<div class="row"><div class="rn">6</div><div class="rv"><span class="lab">화면</span>진료실 문이 열리고 원장님이 맞이함. 출연자가 폰 속 영상을 보여 주며 반가워함</div><div class="ra"><span class="lab">소리</span><div class="say t-pt"><span class="who">출연자 대사</span>"我是看你的视频来的!"<span class="trans">뜻: 원장님 영상 보고 왔어요!</span></div><div class="say t-hi"><span class="who">원장님 · 평소처럼 인사</span>"반갑습니다, 어서 오세요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">원장님 영상 보고 왔어요!</div></div></div>
+<div class="row"><div class="rn">7</div><div class="rv"><span class="lab">화면</span>원장님 정면</div><div class="ra"><span class="lab">소리</span><div class="say t-dr"><span class="who">원장님 한마디 · 카메라 보고</span>"환자분들이 저를 알고 오세요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">환자가 원장님을 알고 옵니다 · 크리메디</div></div></div>
+</div>
+  </section>
+  <section id="p6">
+    <h2>기획안 6 · 한 달에 하루면 됩니다 <small>20초 · 촬영 날 따라 찍기</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill w">원장님 한마디 1개</span><span class="pill">&quot;시간 없어서 못 해&quot; 반박용</span></div>
+    <div class="story"><div><b>고민</b>&quot;SNS 할 시간이 어디 있어요&quot;</div><div><b>하루</b>오전 진료 → 점심 2시간 촬영 → 오후 진료</div><div><b>결과</b>한 달 내내 5개국에 영상이 올라감</div></div>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/ZwYXj3Gg29I" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/ZwYXj3Gg29I/hqdefault.jpg" alt=""></div><div class="tt">피부과 원장이 출근해서 하루를 어떻게 보내는지 일상 브이로그</div></a><a href="https://www.youtube.com/shorts/yJOg23wtC9c" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/yJOg23wtC9c/hqdefault.jpg" alt=""></div><div class="tt">강남 피부과 원장 1분 브이로그</div></a><a href="https://www.youtube.com/watch?v=rbvpOFTupLU" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/rbvpOFTupLU/hqdefault.jpg" alt=""></div><div class="tt">피부과 대표원장의 하루 | 출근길 브이로그</div></a></div>
+    <p class="howto">촬영팀이 <b>촬영 날 원장님 하루를 따라가며</b> 찍습니다. 원장님은 평소대로 일하시면 되고, <b>2번 한마디</b>만 해 주시면 됩니다. 설명은 성우와 자막이 합니다. 화면 위에 시각(AM 9:00 등)을 띄웁니다.</p>
+    <div class="sbs"><div class="sb g1"><div class="sc"><b>09:00</b>출근해 가운 입기</div><div class="st">촬영 날<br>아침</div></div><div class="sb g2"><div class="sc"><b>12:30</b>상담실 조명 세팅, 촬영</div><div class="st">점심시간<br><em>2시간</em></div></div><div class="sb g5"><div class="sc"><b>15:00</b>평소처럼 진료</div><div class="st">오후는<br>그대로 진료</div></div><div class="sb g3"><div class="sc"><b>한 달 뒤</b>5개국 계정 영상 목록</div><div class="st">한 달<br><em>12편</em> 업로드</div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>출근해 가운 입는 원장님(따라 찍기)</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">AM 9:00 촬영 날</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>점심시간 상담실, 조명 세팅 → 원장님이 촬영하는 빠른 컷</div><div class="ra"><span class="lab">소리</span><div class="say t-dr"><span class="who">원장님 한마디 · 카메라 보고</span>"두 시간이면 한 달 치예요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">PM 12:30 점심 2시간 촬영</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>평소 진료(환자 얼굴은 안 나옴)</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">PM 3:00 오후 진료는 그대로</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>폰 화면: 5개국 계정에 올라간 영상 목록</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"기획, 편집, 번역, 업로드는 크리메디가 합니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">한 달 12편 · 5개국 업로드</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>진료실을 나서는 원장님 뒷모습</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"원장님은 한 달에 하루면 됩니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">월 1회 촬영 · 크리메디</div></div></div>
+</div>
+  </section>
+  <section id="g2" class="groupintro">
+    <p class="eyebrow">기획안 7~10</p>
+    <h2 style="font-size:24px">크리메디 강점</h2>
+    <p class="sd">위 1~6이 "원장님이 왜 채널을 키워야 하는지"라면, 7~10은 <b>"왜 크리메디여야 하는지"</b>입니다. 원장님 출연 없이 크리메디가 가진 자료(운영 계정, 작업 화면, 운영 데이터)로 만듭니다.</p>
+  </section>
+  <section id="p7">
+    <h2>기획안 7 · 숫자로 보는 크리메디 <small>15초 · 성과 증명</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill">원장님 출연 없음</span><span class="pill">숫자 그래픽 + 계정 화면 녹화</span></div>
+    <p class="strength"><b>살리는 강점</b>실제 운영 중인 원장님 계정과 운영 병원 평균 데이터가 있다</p>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/M4Ry_mDymms" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/M4Ry_mDymms/hqdefault.jpg" alt=""></div><div class="tt">개원 4개월 만에 2,000례 달성한 원장님이 밝히는 성공 사례</div></a><a href="https://www.youtube.com/shorts/1fSbhDE7An4" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/1fSbhDE7An4/hqdefault.jpg" alt=""></div><div class="tt">외국인이 한국 병원에 쓴 돈 반년 만에 3조, 1등은 피부과</div></a><a href="https://www.youtube.com/watch?v=tjUtc9FytMs" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/tjUtc9FytMs/hqdefault.jpg" alt=""></div><div class="tt">개원 3개월 만에 월 2.5억, 1인 치과 원장님의 전략</div></a></div>
+    <p class="howto">크리메디가 운영한 <b>실제 숫자</b>만 씁니다. 숫자마다 기준(신규 개원 병원 평균, 레퍼런스 계정 합계 등)을 화면 아래 작게 붙이고, 원장님 정보는 가립니다. <b>광고에 쓸 숫자는 솔틴 확인 후 확정</b>합니다.</p>
+    <div class="sbs"><div class="sb g3"><div class="sc"><b>#1</b>대표 영상 조회수 화면</div><div class="st">조회수<br><em>102만</em></div></div><div class="sb g6"><div class="sc"><b>#2</b>원장님 계정 프로필(가림)</div><div class="st">팔로워 <em>2.1만</em><br>좋아요 20.2만</div></div><div class="sb g5"><div class="sc"><b>#3</b>문의 들어오는 화면</div><div class="st">하루 평균 문의<br><em>25건</em></div></div><div class="sb g2"><div class="sc"><b>#4</b>예약 캘린더</div><div class="st">예약 전환<br><em>35%</em></div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영·편집 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>폰 화면 녹화: 더우인 대표 영상, 조회수가 올라가는 부분 확대</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"원장님 영상 한 편, 조회수 100만."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">조회수 102만</div><div class="sub">레퍼런스 원장님 계정 · 더우인</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>원장님 계정 프로필 화면(이름·얼굴 가림)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"쌓이면 원장님 이름이 브랜드가 됩니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">팔로워 2.1만 · 좋아요 20.2만</div><div class="sub">더우인+샤오홍슈 합계</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>예약 문의 DM이 연달아 들어오는 화면(개인정보 가림)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"신규 개원 병원 기준, 하루 평균 문의 25건."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">하루 평균 문의 25건</div><div class="sub">크리메디 운영 신규 개원 병원 평균</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>예약 캘린더가 채워지는 화면</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"그중 35%가 예약으로 이어집니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">예약 전환율 35%</div><div class="sub">병원 상황에 따라 다름</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>크리메디 로고, 상담 버튼</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"미팅에서 실제 계정을 바로 보여 드립니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">실제 계정, 미팅에서 확인</div><div class="sub">크리메디</div></div></div>
+</div>
+  </section>
+  <section id="p8">
+    <h2>기획안 8 · 원장님은 진료만 하세요 <small>20초 · 원스톱 6단계</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill">원장님 한마디 1개(선택)</span><span class="pill">단계 그래픽 + 실제 작업 화면</span></div>
+    <p class="strength"><b>살리는 강점</b>콘텐츠 제작부터 채널 운영, 메타 광고, 예약 유입, 1차 상담까지 한 번에 맡는다(FULL-CARE)</p>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/ZyeBiRNFybA" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/ZyeBiRNFybA/hqdefault.jpg" alt=""></div><div class="tt">병원 개원 마케팅 준비하시는 원장님 꼭 보세요</div></a><a href="https://www.youtube.com/shorts/outv87bwNpg" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/outv87bwNpg/hqdefault.jpg" alt=""></div><div class="tt">병원 마케팅은 선택이 아닌 필수라는 원장님</div></a><a href="https://www.youtube.com/shorts/hSidATQ1-Gg" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/hSidATQ1-Gg/hqdefault.jpg" alt=""></div><div class="tt">원장님들이 돈 날리는 병원 마케팅 Top 3</div></a></div>
+    <p class="howto">6단계를 <b>숫자 카운트처럼 빠르게</b> 넘깁니다. 단계마다 크리메디 팀의 실제 작업 화면(편집 타임라인, 업로드 캘린더, 광고 관리자, 상담 채팅)을 짧게 붙입니다. 개인정보는 가립니다.</p>
+    <div class="sbs"><div class="sb g1"><div class="sc"><b>01</b>촬영 현장</div><div class="st">콘텐츠<br>제작</div></div><div class="sb g3"><div class="sc"><b>03·04</b>광고 관리자 화면</div><div class="st">공식 채널 ·<br>메타 광고</div></div><div class="sb g5"><div class="sc"><b>06</b>상담 채팅 화면</div><div class="st">1차 상담 ·<br>원내 전달</div></div><div class="sb g2"><div class="sc"><b>끝</b>진료실 원장님</div><div class="st">원장님은<br><em>진료만</em></div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영·편집 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>01 · 크리메디 촬영 날 현장(조명, 카메라)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"원장님 콘텐츠 제작,"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">01 원장님 콘텐츠 제작</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>02 · 업로드 캘린더에 영상이 차례로 채워짐</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"원장님 채널 운영,"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">02 원장님 채널 운영</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>03 · 병원 공식 계정 피드</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"병원 공식 채널,"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">03 병원 공식 채널 운영</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>04 · 메타 광고 관리자 화면(수치 가림)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"메타 광고,"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">04 메타 광고 집행</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>05 · 예약 채널로 문의가 들어오는 화면</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"예약 연결,"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">05 예약 채널 유입</div></div></div>
+<div class="row"><div class="rn">6</div><div class="rv"><span class="lab">화면</span>06 · 상담 채팅에 답하는 크리메디 담당자 손, 원내로 예약 정보 전달</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"1차 상담까지 한 번에 맡습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">06 1차 CS · 원내 전달</div></div></div>
+<div class="row"><div class="rn">7</div><div class="rv"><span class="lab">화면</span>진료실에서 평소처럼 진료하는 원장님</div><div class="ra"><span class="lab">소리</span><div class="say t-dr"><span class="who">원장님 한마디 · 카메라 보고</span>"저는 진료만 해요."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">원장님은 진료만 · 크리메디</div></div></div>
+</div>
+  </section>
+  <section id="p9">
+    <h2>기획안 9 · 이런 원장님도 환영합니다 <small>20초 · 걱정 해소형</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill">원장님 출연 없음</span><span class="pill">자막 카드 + 촬영 현장 B-roll</span></div>
+    <p class="strength"><b>살리는 강점</b>이력이 없어도, 카메라가 어색해도, 시간이 없어도, 공식 계정을 다른 업체가 맡고 있어도 시작할 수 있다</p>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/4iFqHIEhPWA" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/4iFqHIEhPWA/hqdefault.jpg" alt=""></div><div class="tt">개원도 안 했는데 병원 마케팅부터 해 달라고요?</div></a><a href="https://www.youtube.com/shorts/gVJrMicJwkU" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/gVJrMicJwkU/hqdefault.jpg" alt=""></div><div class="tt">병원 마케팅 언제 시작하는 게 좋을까</div></a><a href="https://www.youtube.com/shorts/Aq0kbBX2Dc4" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/Aq0kbBX2Dc4/hqdefault.jpg" alt=""></div><div class="tt">개원 전 병원 마케팅? 2가지만 기억하세요</div></a></div>
+    <p class="howto">원장님들이 실제로 가장 많이 묻는 질문 4개를 <b>질문 자막 → 답 자막</b>으로 빠르게 넘깁니다. 화면은 촬영 현장 · 코칭 장면 · 업로드 화면 B-roll입니다.</p>
+    <div class="sbs"><div class="sb g1"><div class="sc"><b>Q1</b>질문 자막 카드</div><div class="st">수상 이력·KOL<br>없어도 되나요?</div></div><div class="sb g3"><div class="sc"><b>Q2</b>촬영 코칭 장면</div><div class="st">카메라가<br>어색해요</div></div><div class="sb g2"><div class="sc"><b>Q3</b>촬영 날 하루</div><div class="st">시간이<br>없어요</div></div><div class="sb g5"><div class="sc"><b>끝</b>로고</div><div class="st">원장님 상황에<br><em>맞춰 시작</em></div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영·편집 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>검은 화면에 질문 자막 → 원장님 설명 장면 B-roll</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"이력보다 중요한 건, 원장님이 진료실에서 매일 하시는 설명입니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">Q. 수상 이력·KOL 활동 없어도 되나요?</div><div class="sub">A. 네. 원장님 이야기를 찾아 콘텐츠로</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>질문 자막 → 촬영팀이 원장님께 촬영 가이드를 설명하는 장면</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"질문지와 촬영 가이드를 드리고, 현장에서 코칭해 드립니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">Q. 카메라 앞이 어색해요</div><div class="sub">A. 질문지 · 촬영 가이드 · 현장 코칭</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>질문 자막 → 촬영 날 한 번에 몰아 찍는 빠른 컷</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"정해진 날 한 번에 몰아서 찍습니다. 나머지는 크리메디가 합니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">Q. 진료 때문에 시간이 없어요</div><div class="sub">A. 정해진 날 한 번에 촬영</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>질문 자막 → 원장님 개인 계정과 병원 공식 계정을 나란히</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"원장님 개인 계정 중심이라, 병원 공식 계정과 따로 진행할 수 있습니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">Q. 공식 계정은 다른 업체가 맡고 있어요</div><div class="sub">A. 원장님 계정은 따로 운영</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>크리메디 로고, 상담 버튼</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub">원장님 상황에 맞춰 시작합니다</div><div class="sub">크리메디</div></div></div>
+</div>
+  </section>
+  <section id="p10">
+    <h2>기획안 10 · 영상 1편, 5개 나라 <small>15초 · 현지화 쇼케이스</small></h2>
+    <div class="meta"><span class="pill">9:16</span><span class="pill">원장님 출연 없음(기존 영상 사용)</span><span class="pill">편집 화면 녹화</span></div>
+    <p class="strength"><b>살리는 강점</b>단순 번역이 아니라 나라마다 톤·자막·썸네일·플랫폼을 바꿔 운영한다(중국 본토 운영은 솔틴 노하우)</p>
+    <p class="reflab">참고 영상 · 누르면 원본이 열립니다</p><div class="refs refs3"><a href="https://www.youtube.com/shorts/bql868jViAE" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/bql868jViAE/hqdefault.jpg" alt=""></div><div class="tt">중국어, 영어, 일본어로도 편안하게 상담받으세요</div></a><a href="https://www.youtube.com/shorts/vCKvf8oxrus" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/vCKvf8oxrus/hqdefault.jpg" alt=""></div><div class="tt">외국인 환자 상담, 통역사 없이도 가능합니다</div></a><a href="https://www.youtube.com/watch?v=QamOsqloYUA" target="_blank" rel="noopener"><div class="th"><img loading="lazy" src="https://i.ytimg.com/vi/QamOsqloYUA/hqdefault.jpg" alt=""></div><div class="tt">해외 환자 유치, 이것부터 보세요</div></a></div>
+    <p class="howto">원장님 기존 영상 1편을 가운데 두고, <b>나라별 버전이 하나씩 펼쳐지는</b> 편집 영상입니다. 각 버전에서 무엇이 달라지는지(플랫폼, 자막 언어, 썸네일 톤, 첫 문장)를 자막으로 짚습니다.</p>
+    <div class="sbs"><div class="sb g1"><div class="sc"><b>#1</b>원본 영상 1편</div><div class="st">원본<br><em>1편</em></div></div><div class="sb g4"><div class="sc"><b>#2</b>더우인 · 중국어 자막</div><div class="st">중국<br>더우인 · 샤오홍슈</div></div><div class="sb g6"><div class="sc"><b>#4</b>인스타 · 일본어</div><div class="st">일본<br>인스타그램</div></div><div class="sb g5"><div class="sc"><b>#6</b>5개 화면 한 번에</div><div class="st">1편 → <em>5개 나라</em></div></div></div>
+    <p class="sbn">이미지 콘티 · 아래 표가 실제 촬영·편집 순서</p>
+    <div class="rows"><div class="rh"><div></div><div>화면 · 촬영 방법</div><div>소리 · 누가 무슨 말을</div><div>자막 · 화면에 들어갈 글자</div></div>
+<div class="row"><div class="rn">1</div><div class="rv"><span class="lab">화면</span>화면 가운데 원장님 원본 영상 1편(한국어)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"원장님 영상 한 편이,"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">원본 1편</div></div></div>
+<div class="row"><div class="rn">2</div><div class="rv"><span class="lab">화면</span>원본이 오른쪽으로 밀리며 더우인 화면 버전 등장(중국어 자막, 중국식 썸네일)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"중국에서는 더우인과 샤오홍슈로,"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">중국 · 더우인 · 샤오홍슈</div></div></div>
+<div class="row"><div class="rn">3</div><div class="rv"><span class="lab">화면</span>대만/홍콩 버전(번체 자막)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"대만과 홍콩에서는 번체로,"</div></div><div class="rs"><span class="lab">자막</span><div class="sub">대만·홍콩 · 번체</div></div></div>
+<div class="row"><div class="rn">4</div><div class="rv"><span class="lab">화면</span>일본 버전(일본어 자막, 인스타 피드 톤)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"일본, 영미, 태국까지."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">일본 · 영미 · 태국</div></div></div>
+<div class="row"><div class="rn">5</div><div class="rv"><span class="lab">화면</span>같은 장면의 첫 문장이 나라별로 다르게 바뀌는 비교(자막 강조)</div><div class="ra"><span class="lab">소리</span><div class="say t-vo"><span class="who">성우 내레이션</span>"번역만 하는 게 아니라, 나라마다 먹히는 첫 문장과 톤으로 바꿉니다."</div></div><div class="rs"><span class="lab">자막</span><div class="sub">나라마다 다른 첫 문장 · 다른 톤</div></div></div>
+<div class="row"><div class="rn">6</div><div class="rv"><span class="lab">화면</span>5개 버전이 한 화면에 격자로</div><div class="ra"><span class="lab">소리</span><div class="say t-mu"><span class="who">말 없음 · 음악만</span>음악만</div></div><div class="rs"><span class="lab">자막</span><div class="sub gr">영상 1편 → 5개 나라 채널</div><div class="sub">크리메디</div></div></div>
+</div>
+  </section>
+
+  <section id="prep">
+    <h2>촬영 전 확인</h2>
+    <table>
+      <tr><th>항목</th><th>확인할 것</th><th>담당</th></tr>
+      <tr><td>노출 범위</td><td>얼굴 · 실명 · 병원명 · 개원 첫 달 매출(00억) · 개원 첫날 예약 수 · 조회수, 어디까지 쓸지 원장님 서면 동의</td><td>대표님 · 솔틴</td></tr>
+      
+      <tr><td>과거 기록</td><td>첫 촬영 날 메이킹·공사 현장·첫 업로드 화면 등 크리메디가 가진 영상·사진(기획안 3)</td><td>솔틴</td></tr>
+      <tr><td>출연자</td><td>외국인 환자 역 3~4명(솔틴 인플루언서), 기획안 5 주인공 1명(중국어), 문 여는 손 등 스태프 1명</td><td>솔틴</td></tr>
+      <tr><td>일정</td><td>원장님 시간은 1시간 이내(한마디 + 평소 모습 따라 찍기). 빈 대기실은 오전 일찍, 찬 대기실은 출연자 모인 뒤</td><td>솔틴</td></tr>
+      <tr><td>소품</td><td>할인 전단 목업, 가격표, 캐리어, 원장님 한마디 스케치북</td><td>솔틴</td></tr>
+    </table>
+  </section>
+
+  <section id="rule">
+    <h2>촬영 주의</h2>
+    <ul>
+      <li>전부 <b>세로(9:16)</b>로 촬영.</li>
+      <li>원장님 <b>핀마이크</b>, 셀카도 소리 녹음. 컷마다 앞뒤 2초 여유.</li>
+      <li>원장님 한마디는 스케치북·프롬프터로 띄워 드리고, 편하게 2~3번만. 말투는 원장님 편한 대로.</li>
+      <li>빈 대기실 ↔ 찬 대기실, 위 ↔ 아래 분할처럼 <b>비교 컷은 같은 자리·같은 앵글</b>. 바닥에 삼각대 자리 테이프 표시.</li>
+      <li>색은 <b>일반(Normal)</b>으로. 로그 촬영 금지.</li>
+      <li>실제 환자 얼굴·차트, 다른 병원 이름·가격은 화면 밖으로(전단·지도 화면은 편집에서 블러).</li>
+      <li>숫자는 동의받은 범위에서만. 동의 전이면 숫자 없는 버전도 한 번 더.</li>
+    </ul>
+  </section>
+
+  <p class="foot">THE SC 퍼포먼스마케팅부 · 2026-11-13 최종안</p>
+</main>
+</div>
+</body>
+</html>
